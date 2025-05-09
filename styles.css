@@ -1,0 +1,406 @@
+:root {
+    --background-grass1: #002000;
+    --background-grass2: #103010;
+    --background-sky1: #100020;
+    --background-sky2: #301060;
+    --font-color1: #BFDFEF;
+    --font-color2: #DFCFFF;
+    --font-color3: #FFEFFF;
+    --item-font-color1: #6FAFEF;
+    --item-font-color2: #1F6F8F;
+    --item-font-color3: #DFFFFF;
+    --gold-font-color1: #FBE200;
+    --item-background-color1: #6FCFEF;
+    --text-shadow1: #6F5F7F;
+    --border-color1: #6F2FAF;
+    --link-back-color1: #AF6FAF;
+    --link-back-color2: #8F6F8F;
+    --iridium-color1: #DD7CE4;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Tahoma, sans-serif;
+    color: var(--font-color1);
+}
+
+body {
+    width: 97vw;
+    height: 100vh;
+    background-color: var(--background-sky1);
+    position: relative;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Entoloma_hochstetteri_%288620033483%29.jpg/1200px-Entoloma_hochstetteri_%288620033483%29.jpg?20180621110959);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.item {
+    color: var(--item-font-color1);
+}
+
+.item:hover {
+    background-color: var(--item-background-color1);
+    color: var(--item-font-color2);
+}
+
+.iridium {
+    color: var(--iridium-color1);
+}
+
+.gold-currency {
+    color: var(--gold-font-color1);
+}
+
+.reference {
+    color: var(--font-color2);
+}
+
+.reference:hover {
+    color: var(--font-color3);
+}
+
+code {
+    display: block;
+    font-family: Monospace, sans-serif;
+    padding: 20px;
+}
+
+#nav-bar {
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+    max-width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 1vw;
+    border: 4px ridge var(--border-color1);
+    border-left-width: 8px;
+    justify-content: space-around;
+    background: 
+    linear-gradient(
+        var(--background-sky2),
+        var(--background-sky1)
+    );
+}
+
+.nav-link {
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 8px;
+}
+
+.nav-link:hover {
+    animation-name: button-hover-animation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    color: var(--font-color2);
+    background: 
+    repeating-linear-gradient(
+        45deg,
+        var(--link-back-color1) 2px,
+        var(--link-back-color2) 6px,
+        transparent 10px
+    );
+}
+
+.nav-link:active {
+    animation-name: button-active-animation;
+    animation-duration: 6s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    background: 
+    repeating-linear-gradient(
+        45deg,
+        var(--link-back-color1) 2px,
+        var(--link-back-color2) 6px,
+        transparent 10px
+    );
+    color: var(--font-color1);
+}
+
+div {
+    width: 75%;
+    min-height: 100vh;
+    background-image: 
+    linear-gradient(
+        var(--background-sky1),
+        var(--background-sky2) 70%,
+        transparent 71%
+    ), 
+    repeating-linear-gradient(
+        var(--background-grass1) 1px,
+        transparent 2px,
+        transparent 12px,
+        var(--background-grass1) 3px,
+        transparent 3px,
+        transparent 9px
+    ), 
+    repeating-linear-gradient(
+        82deg,
+        var(--background-grass2) 1px,
+        var(--background-grass2) 2px,
+        var(--background-grass1) 3px,
+        var(--background-grass1) 5px,
+        var(--background-grass2) 5px,
+        var(--background-grass2) 6px,
+        var(--background-grass1) 6px,
+        var(--background-grass1) 8px
+    );
+}
+
+
+
+#start-page {
+    height: 86vh;
+    min-height: 20vh;
+    padding: 40px;
+    background-image: none;
+}
+
+h1 {
+    font-family: Tahoma, sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #E07740;
+    text-transform: uppercase;
+    /* this shadow's for the title border, and the actual shadow as well*/
+    text-shadow: 
+    -4px 6px 2px rgba(98, 51, 38, 0.7), 
+    -2px 2px 1px #804730, 
+    2px -2px 1px #804730, 
+    2px 2px 1px #804730, 
+    -2px -2px 1px #804730;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    padding-top: 39px;
+    padding-bottom: 26px;
+}
+
+h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+h2, h3, h4, dt {
+    color: var(--font-color2);
+}
+
+p, h1, h2, h3, li, dd {
+    padding-left: 22px;
+}
+
+p, span {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+dl {
+    border: 4px groove var(--border-color1);
+}
+
+dt {
+    font-weight: 500;
+    font-size: 1.4rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+dt:nth-child(1) {
+    padding-top: 0;
+}
+
+dl, table {
+    width: 66%;
+    background: 
+    radial-gradient(
+        var(--background-sky1) 0%,
+        var(--background-sky1) 10%,
+        var(--background-sky2) 20%,
+        var(--background-sky2) 30%,
+        var(--background-sky1) 40%,
+        var(--background-sky1) 50%,
+        var(--background-sky2) 60%,
+        var(--background-sky2) 70%,
+        var(--background-sky1) 80%,
+        var(--background-sky1) 90%,
+        var(--background-sky2) 100%
+    );
+    padding: 1rem;
+    border-radius: 6%;
+    margin: 0 auto;
+}
+
+li {
+    list-style-position: inside;
+}
+
+#table-legend1 li {
+    list-style: none;
+}
+
+h2, h3, h4, dt, .author span, .nav-link {
+    font-family: Garamond, serif;
+}
+
+.author {
+    font-style: oblique;
+    padding-bottom: 10vh;
+}
+
+.author span {
+    font-size: 1.2rem;
+}
+
+.author span:active {
+    display: none;
+}
+
+.author:active::after {
+    content: "youwch!";
+    color: red;
+}
+
+#table-legend-title1, #table-legend1 {
+    margin-left: 4vw;
+}
+
+.table-title {
+    font-size: 1.6rem;
+    padding-top: 22px;
+    padding-bottom: 12px;
+    text-shadow: -10px 13px 4px var(--text-shadow1);
+    text-align: center;
+}
+
+table {
+    gap: 0;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 4px groove var(--border-color1);
+}
+
+td:first-child {
+    text-align: center;
+}
+
+#adventurers-guild td:first-child {
+    text-align: left;
+    width: 20vw;
+}
+
+#adventurers-guild td:last-child {
+    text-align: center;
+    min-width: 10%;
+    width: 80px;
+    padding: 0.5rem 0;
+
+}
+
+#concernedape {
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 0.9rem;
+    justify-content: space-evenly;
+}
+
+.eric-quote {
+    width: 70%;
+    padding: 20px 3px;
+    margin: 3px auto;
+}
+
+#quote1, #quote2 {
+    background-color: rgba(120, 40, 210, 0.3);
+}
+
+#credit {
+    height: 74vh;
+    min-height: 16px;
+    background-image: none;
+}
+
+#credit p {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    background-color: rgba(48, 16, 96, 0.8);
+    border-radius: 30px;
+    margin: 10px auto 0;
+}
+
+#credit-link1:hover {
+    color: var(--font-color2);
+    text-shadow: -12px 5px 12px var(--text-shadow1);
+}
+
+@keyframes button-hover-animation {
+    0% {
+        color: var(--font-color1);
+    }
+    50% {
+        transform: scale(1.05);
+        color: var(--font-color3);
+    }
+    100% {
+        color: var(--font-color1);
+    }
+}
+
+@keyframes button-active-animation {
+    0% {
+        color: var(--font-color3);
+    }
+    50% {
+        transform: scale(0.85);
+        color: var(--font-color3);
+    }
+    100% {
+        color: var(--font-color1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #nav-bar {
+        width: 97vw;
+        max-width: 97vw;
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .nav-link {
+        font-size: 2rem;
+        padding: 14px;
+        height: 2rem;
+    }
+
+    div {
+        width: 99%;
+    }
+
+    td, th {
+        font-size: 0.75rem;
+    }
+}
