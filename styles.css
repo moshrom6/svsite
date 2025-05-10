@@ -242,6 +242,7 @@ dl, table {
 }
 
 li {
+    list-style-type: square;
     list-style-position: inside;
 }
 
