@@ -6,6 +6,9 @@
     --font-color1: #BFDFEF;
     --font-color2: #DFCFFF;
     --font-color3: #FFEFFF;
+    --skill-color1: #F46676;
+    --professions-color1: #FF9F00;
+    --mastery-color1: #66E666;
     --item-font-color1: #6FAFEF;
     --item-font-color2: #1F6F8F;
     --item-font-color3: #DFFFFF;
@@ -35,6 +38,18 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.skill {
+    color: var(--skill-color1);
+}
+
+.professions {
+    color: var(--professions-color1);
+}
+
+.mastery {
+    color: var(--mastery-color1);
 }
 
 .item {
@@ -92,6 +107,7 @@ code {
     text-decoration: none;
     font-size: 1.2rem;
     border-radius: 8px;
+    scroll-behavior: smooth;
 }
 
 .nav-link:hover {
@@ -152,15 +168,19 @@ div {
         var(--background-grass1) 6px,
         var(--background-grass1) 8px
     );
+    padding-bottom: 1rem;
 }
 
-
-
 #start-page {
-    height: 86vh;
-    min-height: 20vh;
+    height: 72vh;
+    min-height: 69vh;
     padding: 40px;
     background-image: none;
+}
+
+#intro {
+    height: 30vh;
+    min-height: 30vh;
 }
 
 h1 {
@@ -382,26 +402,61 @@ td:first-child {
     }
 }
 
-@media screen and (max-width: 650px) {
+/* styling for mobile devices, tablets, etc. */
+@media screen and (max-width: 760px) {
+    :root {
+        font-size: 14px;
+        overflow-x: hidden;
+    }
+    
     #nav-bar {
         width: 97vw;
         max-width: 97vw;
-        position: static;
+        height: 20vh;
+        position: fixed;
+        right: 0;
+        z-index: 1;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
     }
 
     .nav-link {
-        font-size: 2rem;
-        padding: 14px;
+        font-size: 1.2rem;
+        padding: 2px;
         height: 2rem;
+        background-color: rgba(160, 40, 210, 0.1);
+    }
+
+    #start-page {
+        padding-top: 22vh;
+        padding-left: 0;
+    }
+
+    h1 {
+        font-size: 2rem;
     }
 
     div {
-        width: 99%;
+        width: 96%;
+        position: relative;
+        padding-right: 1rem;
+        margin: 0 auto;
     }
+}
 
-    td, th {
-        font-size: 0.75rem;
+@media screen and (max-width: 460px) {
+    :root {
+        font-size: 12px;
+    }
+    #nav-bar {
+        height: 14vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    
+    .nav-link:nth-child(13) {
+        padding-bottom: 4.2rem;
     }
 }
