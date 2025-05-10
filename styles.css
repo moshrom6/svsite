@@ -404,6 +404,11 @@ td:first-child {
 
 /* styling for mobile devices, tablets, etc. */
 @media screen and (max-width: 760px) {
+    body {
+        background-size: 66%;
+        background-repeat: repeat;
+    }
+    
     :root {
         font-size: 14px;
         overflow-x: hidden;
